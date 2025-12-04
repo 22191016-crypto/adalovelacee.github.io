@@ -15,164 +15,51 @@
             <h1>Ada Lovelace</h1>
             <div class="subtitle">La primera programadora de la historia</div>
         </header>
+
         <section class="hero">
             <div class="hero-image">
                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTpG9hPAi6d9dBKaEPJkNFxrkhUeEWg5hF1saffGMGBYt7q-kfm9vpfHTTbE0i1620qOT-V52hNOjmO6yfsjlUtKX-y4e956hROaQ25C-Y0-Q" alt="Retrato de Ada Lovelace" />
             </div>
             <div class="hero-content">
                 <h2>Pionera de la Computación</h2>
-                <p>Augusta Ada King, Condesa de Lovelace, fue una matemática y escritora británica conocida principalmente por su trabajo sobre la máquina analítica de Charles Babbage. Entre sus notas sobre la máquina, se encuentra lo que se reconoce hoy como el primer algoritmo destinado a ser procesado por una máquina, por lo que se la considera como la primera programadora de ordenadores.</p>
-                <p>Dedujo y previó la capacidad de los ordenadores para ir más allá de los simples cálculos numéricos, mientras que otros, incluido el propio Babbage, se centraron únicamente en estas capacidades.</p>
+                <p>Augusta Ada King, Condesa de Lovelace, fue una matemática y escritora británica conocida principalmente por su trabajo sobre la máquina analítica de Charles Babbage.</p>
+                <p>En 1843 escribió el que se considera el primer algoritmo destinado a ser procesado por una máquina, por lo que está reconocida como la primera programadora de la historia.</p>
             </div>
         </section>
-        
-        <section class="bio-section">
-            <h2>Biografía</h2>
-            <p>Ada Lovelace nació el 10 de diciembre de 1815 en Londres, Inglaterra. Hija del poeta Lord Byron y de Anna Isabella Milbanke, recibió una educación excepcional para una mujer de su época, con especial énfasis en matemáticas y ciencias.</p>
-            <p>A los 17 años conoció a Charles Babbage, quien se convirtió en su mentor y colaborador. Su trabajo más importante incluye la traducción y ampliación de un artículo sobre la máquina analítica de Babbage, donde añadió notas que superaban en longitud al artículo original.</p>
-            <div class="code-snippet">
-// Algoritmo de Bernoulli por Ada Lovelace<br>
-function calcularBernoulli(n) {<br>
-  let resultados = [1];<br>
-  for (let m = 1; m <= n; m++) {<br>
-    let suma = 0;<br>
-    for (let k = 0; k < m; k++) {<br>
-      suma += binomial(m + 1, k) * resultados[k];<br>
-    }<br>
-    resultados[m] = -suma / (m + 1);<br>
-  }<br>
-  return resultados;<br>
-}
-            </div>
-        </section>
-        
+
+        <!-- CRONOLOGÍA -->
         <section class="timeline">
             <div class="timeline-item">
                 <div class="timeline-year">1815</div>
-                <p>Nacimiento de Ada Lovelace en Londres, hija de Lord Byron y Anna Isabella Milbanke.</p>
+                <p>Nacimiento en Londres</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-year">1833</div>
-                <p>Conoce a Charles Babbage y queda fascinada por su máquina diferencial.</p>
+                <p>Conoce a Charles Babbage</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1842-1843</div>
-                <p>Traduce y amplía el artículo de Luigi Menabrea sobre la máquina analítica, añadiendo sus propias notas que incluyen el primer algoritmo.</p>
+                <div class="timeline-year">1842–1843</div>
+                <p>Publica el primer algoritmo de la historia</p>
             </div>
         </section>
-
-        <section class="bio-section" id="formulario-area">
-            <h2>Área de Formulario de Contacto</h2>
-            <p>Envía tus comentarios sobre la contribución de Ada Lovelace a la computación.</p>
-            
-            <form id="contactoFormulario">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre aquí">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required placeholder="tu.correo@ejemplo.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="semestre">Semestre de Capacitación:</label>
-                    <select id="semestre" name="semestre" required>
-                        <option value="">Selecciona tu semestre</option>
-                        <option value="1">1er Semestre</option>
-                        <option value="2">2do Semestre</option>
-                        <option value="3">3er Semestre</option>
-                        <option value="4">4to Semestre</option>
-                        <option value="Graduado">Graduado</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="comentario">Comentario sobre Ada Lovelace:</label>
-                    <textarea id="comentario" name="comentario" rows="4" required placeholder="Tus pensamientos y comentarios..."></textarea>
-                </div>
-                
-                <button type="submit">Enviar Comentario</button>
-            </form>
-
-            <div id="datos-enviados">
-                <h3>Evidencia de Datos Capturados (Envío AJAX)</h3>
-                <p>El envío de datos no recarga la página ni cambia la URL (simulando PHP/API).</p>
-                <pre id="resultado-json">Aún no se han enviado datos del formulario.</pre>
-            </div>
-        </section>
-
-        <section class="bio-section">
-            <h2>Área de Galería: Trabajos de Capacitación</h2>
-            <p>Una colección de los trabajos y apuntes realizados durante la capacitación, cubriendo los diferentes semestres.</p>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="20241108_183652.jpg" alt="Tabla de Tipos de Freelancers y Sueldos" />
-                </div>
-                <div class="gallery-item">
-                    <img src="20240914_003558 (1).jpg" alt="Cronograma de Bimestres Comunidades Virtuales" />
-                </div>
-                <div class="gallery-item">
-                    <img src="Documento A4 línea del tiempo de historia collage antiguo beis.pdf#page=1" alt="Línea del Tiempo de la Historia de YouTube - Página 1" />
-                </div>
-                <div class="gallery-item">
-                    <img src="Documento A4 línea del tiempo de historia collage antiguo beis.pdf#page=2" alt="Línea del Tiempo de la Historia de YouTube - Página 2" />
-                </div>
-                <div class="gallery-item">
-                    <img src="20241108_192208.jpg" alt="Ventajas y Desventajas de Freelancer y eCommerce" />
-                </div>
-                <div class="gallery-item">
-                    <img src="20" alt="Apuntes sobre Redes Sociales y Comunidades Virtuales Educativas" />
-                </div>
-                <div class="gallery-item">
-                    <img src="20241108_192156.jpg" alt="Tabla de Empresas de eCommerce (Amazon, Alibaba, eBay, Shopify, Etsy)" />
-                </div>
-                <div class="gallery-item">
-                    <img src="20241115_182820.jpg" alt="Crucigrama de E-Learning" />
-                </div>                <div class="gallery-item">
-                    <img src="20240920_191722.jpg" alt="Mapa Conceptual de Administración de Comunidades Virtuales" />
-                </div>
-                <div class="gallery-item">
-                    <img src="Untitled_2024-09-14_00-42-53.pdf#page=1" alt="Diagrama de Conceptos de Comunidades Virtuales" />
-                </div>
-            </div>
-        </section>
+        
+        <div style="text-align:center; margin: 3rem 0;">
+            <a href="galeria-formulario.html" style="background:#667eea; color:white; padding:15px 40px; font-size:1.3rem; border-radius:12px; text-decoration:none; font-weight:700; display:inline-block;">
+                Ver Galería de Trabajos y Formulario
+            </a>
+        </div>
 
         <footer>
-            <p>&copy; 2025 - Sitio web sobre Ada Lovelace</p>
-             <p>&copy; Jonathan Alexis Tafoya Ojeda <p>
+            <p>© 2025 - Sitio web sobre Ada Lovelace</p>
             <nav class="nav-buttons">
                 <a href="index.html">Inicio</a>
                 <a href="portada.html">Portada</a>
                 <a href="parte1.html">Parte 1</a>
                 <a href="parte2.html">Parte 2</a>
                 <a href="parte3.html">Parte 3</a>
+                <a href="galeria-formulario.html">Galería y Formulario</a>
             </nav>
         </footer>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contactoFormulario');
-            const resultado = document.getElementById('resultado-json');
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); 
-                const formData = new FormData(form);
-                const data = {};
-                formData.forEach((value, key) => {
-                    data[key] = value;
-                });
-                resultado.textContent = JSON.stringify(data, null, 2);
-                resultado.insertAdjacentHTML('beforebegin', `
-                    <div id="mensaje-exito" style="color: #4a5568; background-color: #c6f6d5; padding: 10px; border-radius: 8px; margin-bottom: 15px; font-weight: 600;">
-                        ¡Gracias! Datos capturados y presentados como evidencia.
-                    </div>
-                `);
-
-            });
-        });
-    </script>
 </body>
-
 </html>

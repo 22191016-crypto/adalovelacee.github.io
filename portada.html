@@ -7,206 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <style>
-        /* Estilos generales (mantener) */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 2rem 0;
-            text-align: center;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #4a5568;
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            font-size: 1.5rem;
-            color: #667eea;
-            font-weight: 400;
-        }
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            align-items: center;
-        }
-        .hero-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .hero-content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2.5rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-        .bio-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-        }
-        h2 {
-            color: #667eea;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        .timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .timeline-item {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-        .timeline-year {
-            font-family: 'JetBrains Mono', monospace;
-            color: #667eea;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        .gallery-item {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: white;
-        }
-        .code-snippet {
-            background: #2d3748;
-            color: #e2e8f0;
-            padding: 1.5rem;
-            border-radius: 10px;
-            font-family: 'JetBrains Mono', monospace;
-            margin: 1.5rem 0;
-            overflow-x: auto;
-        }
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-            }
-            h1 {
-                font-size: 2.5rem;
-            }
-            .subtitle {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Estilos específicos del Formulario */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #4a5568;
-        }
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 10px 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
-            outline: none;
-        }
-        button[type="submit"] {
-            background-color: #667eea;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-        }
-        button[type="submit"]:hover {
-            background-color: #5a6cd9;
-            transform: translateY(-1px);
-        }
-        
-        /* Área de Evidencia de Datos */
-        #datos-enviados {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            border: 2px dashed #667eea;
-            border-radius: 10px;
-            background-color: #f7f9fc;
-        }
-        #datos-enviados h3 {
-            color: #764ba2;
-            margin-bottom: 1rem;
-        }
-        #datos-enviados pre {
-            background-color: #edf2f7;
-            padding: 1rem;
-            border-radius: 6px;
-            white-space: pre-wrap; /* Asegura que el texto largo se ajuste */
-            word-wrap: break-word;
-            font-family: 'JetBrains Mono', monospace;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <div class="container">
@@ -214,7 +15,6 @@
             <h1>Ada Lovelace</h1>
             <div class="subtitle">La primera programadora de la historia</div>
         </header>
-        <!-- SECCIÓN HERO -->
         <section class="hero">
             <div class="hero-image">
                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTpG9hPAi6d9dBKaEPJkNFxrkhUeEWg5hF1saffGMGBYt7q-kfm9vpfHTTbE0i1620qOT-V52hNOjmO6yfsjlUtKX-y4e956hROaQ25C-Y0-Q" alt="Retrato de Ada Lovelace" />
@@ -226,7 +26,6 @@
             </div>
         </section>
         
-        <!-- SECCIÓN BIOGRAFÍA Y CÓDIGO -->
         <section class="bio-section">
             <h2>Biografía</h2>
             <p>Ada Lovelace nació el 10 de diciembre de 1815 en Londres, Inglaterra. Hija del poeta Lord Byron y de Anna Isabella Milbanke, recibió una educación excepcional para una mujer de su época, con especial énfasis en matemáticas y ciencias.</p>
@@ -247,7 +46,6 @@ function calcularBernoulli(n) {<br>
             </div>
         </section>
         
-        <!-- SECCIÓN CRONOLOGÍA -->
         <section class="timeline">
             <div class="timeline-item">
                 <div class="timeline-year">1815</div>
@@ -263,7 +61,6 @@ function calcularBernoulli(n) {<br>
             </div>
         </section>
 
-        <!-- ÁREA DE FORMULARIO -->
         <section class="bio-section" id="formulario-area">
             <h2>Área de Formulario de Contacto</h2>
             <p>Envía tus comentarios sobre la contribución de Ada Lovelace a la computación.</p>
@@ -299,7 +96,6 @@ function calcularBernoulli(n) {<br>
                 <button type="submit">Enviar Comentario</button>
             </form>
 
-            <!-- Área para mostrar los datos capturados (Evidencia) -->
             <div id="datos-enviados">
                 <h3>Evidencia de Datos Capturados (Envío AJAX)</h3>
                 <p>El envío de datos no recarga la página ni cambia la URL (simulando PHP/API).</p>
@@ -307,61 +103,50 @@ function calcularBernoulli(n) {<br>
             </div>
         </section>
 
-        <!-- ÁREA DE GALERÍA -->
         <section class="bio-section">
             <h2>Área de Galería: Trabajos de Capacitación</h2>
             <p>Una colección de los trabajos y apuntes realizados durante la capacitación, cubriendo los diferentes semestres.</p>
             <div class="gallery">
-                <!-- 1. Tabla de Tipos de Freelancers -->
                 <div class="gallery-item">
                     <img src="20241108_183652.jpg" alt="Tabla de Tipos de Freelancers y Sueldos" />
                 </div>
-                <!-- 2. Cronograma de Comunidades Virtuales -->
                 <div class="gallery-item">
                     <img src="20240914_003558 (1).jpg" alt="Cronograma de Bimestres Comunidades Virtuales" />
                 </div>
-                <!-- 3. Historia de YouTube (Página 1) -->
                 <div class="gallery-item">
                     <img src="Documento A4 línea del tiempo de historia collage antiguo beis.pdf#page=1" alt="Línea del Tiempo de la Historia de YouTube - Página 1" />
                 </div>
-                <!-- 4. Historia de YouTube (Página 2) -->
                 <div class="gallery-item">
                     <img src="Documento A4 línea del tiempo de historia collage antiguo beis.pdf#page=2" alt="Línea del Tiempo de la Historia de YouTube - Página 2" />
                 </div>
-                <!-- 5. Ventajas y Desventajas Freelancer y eCommerce -->
                 <div class="gallery-item">
                     <img src="20241108_192208.jpg" alt="Ventajas y Desventajas de Freelancer y eCommerce" />
                 </div>
-                <!-- 6. Preguntas sobre Redes Sociales -->
                 <div class="gallery-item">
-                    <img src="20240914_003850.jpg" alt="Apuntes sobre Redes Sociales y Comunidades Virtuales Educativas" />
+                    <img src="20" alt="Apuntes sobre Redes Sociales y Comunidades Virtuales Educativas" />
                 </div>
-                <!-- 7. Tabla de Empresas de eCommerce -->
                 <div class="gallery-item">
                     <img src="20241108_192156.jpg" alt="Tabla de Empresas de eCommerce (Amazon, Alibaba, eBay, Shopify, Etsy)" />
                 </div>
-                <!-- 8. Crucigrama de E-Learning -->
                 <div class="gallery-item">
                     <img src="20241115_182820.jpg" alt="Crucigrama de E-Learning" />
-                </div>
-                <!-- 9. Mapa Conceptual de Administración de Comunidades Virtuales -->
-                <div class="gallery-item">
+                </div>                <div class="gallery-item">
                     <img src="20240920_191722.jpg" alt="Mapa Conceptual de Administración de Comunidades Virtuales" />
                 </div>
-                <!-- 10. Diagrama de Comunidades Virtuales (Conceptos) -->
                 <div class="gallery-item">
                     <img src="Untitled_2024-09-14_00-42-53.pdf#page=1" alt="Diagrama de Conceptos de Comunidades Virtuales" />
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer>
             <p>&copy; 2025 - Sitio web sobre Ada Lovelace</p>
-            <nav>
-                <a href="file:///C:/Users/Plantel19/Downloads/parte1.html">Parte 1</a> | 
-                <a href="file:///C:/Users/Plantel19/Downloads/parte2.html">Parte 2</a> | 
-                <a href="file:///C:/Users/Plantel19/Downloads/parte3.html">Parte 3</a>
+            <nav class="nav-buttons">
+                <a href="index.html">Inicio</a>
+                <a href="portada.html">Portada</a>
+                <a href="parte1.html">Parte 1</a>
+                <a href="parte2.html">Parte 2</a>
+                <a href="parte3.html">Parte 3</a>
             </nav>
         </footer>
     </div>
@@ -370,36 +155,20 @@ function calcularBernoulli(n) {<br>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contactoFormulario');
             const resultado = document.getElementById('resultado-json');
-
             form.addEventListener('submit', function(event) {
-                // Previene el comportamiento por defecto de recarga de la página
                 event.preventDefault(); 
-
-                // 1. Rescatar la información capturada en el formulario
                 const formData = new FormData(form);
                 const data = {};
                 formData.forEach((value, key) => {
                     data[key] = value;
                 });
-
-                // 2. Simular el envío de datos y evitar el cambio de URL
-                // En un entorno real, aquí se usaría 'fetch' para enviar datos a PHP/API.
-                
-                // 3. Presentar la información como evidencia
                 resultado.textContent = JSON.stringify(data, null, 2);
-
-                // 4. Mostrar un mensaje de éxito (sustituto de alert/confirm)
                 resultado.insertAdjacentHTML('beforebegin', `
                     <div id="mensaje-exito" style="color: #4a5568; background-color: #c6f6d5; padding: 10px; border-radius: 8px; margin-bottom: 15px; font-weight: 600;">
                         ¡Gracias! Datos capturados y presentados como evidencia.
                     </div>
                 `);
 
-                // Opcional: Remover el mensaje de éxito después de unos segundos
-                setTimeout(() => {
-                    const mensaje = document.getElementById('mensaje-exito');
-                    if (mensaje) mensaje.remove();
-                }, 5000);
             });
         });
     </script>
